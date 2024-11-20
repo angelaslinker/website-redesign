@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.header {
+    border-top: 1px solid var(--primary-text);
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-text);
+}
+
+
+h1 {
+    font-family: 'Moonkids';
+    font-weight: 100;
+    overflow: hidden;
+    margin-right: 2em;
+    border-right: .15em solid var(--primary-text);
+    color: var(--primary-text);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+
+}
+
+.navbar {
+    margin-left: 3em;
+    margin-right: 3em;
+    flex: 1;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.navbar ul li a {
+    font-family: 'Megunso';
+
+    text-decoration: none;
+    color: var(--primary-text)
+}
+
+li {
+    padding: 5px;
+    font-size: 20px;
+
+}
+
+.navbar ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.logo {
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary-text);
+    }
+}

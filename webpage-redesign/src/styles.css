@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Moonkids';
+    src: url(assets/fonts/moonkids-ext-bd-font/MoonkidsPersonalUseExtbd-gxPZ3.ttf);
+}
+
+@font-face {
+    font-family: 'Purplemagic';
+    src: url(assets/fonts/purple-magic-svg-font/PurplemagicdemoSvg-x32mO.otf)format('opentype');
+
+}
+
+@font-face {
+    font-family: 'Megunso';
+    src: url(assets/fonts/megunso-font/MegunsoDemoVersion-j9WD7.otf);
+
+}
+
+@font-face {
+    font-family: 'Blanks';
+    src: url(assets/fonts/blanks-script-font/BlanksscriptpersonaluseBdit-jEM6O.otf);
+
+}
+
+:root {
+    --primary-text: #133020;
+    --background-color: #F8EDD9;
+    --primary-color: #327029;
+    --secondary-color: #F0BE49;
+    --accent-color: #DD5C36;
+}
+
+body {
+    background-color: var(--background-color);
+}

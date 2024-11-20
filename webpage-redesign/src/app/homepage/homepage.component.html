@@ -1,0 +1,6 @@
+<app-introduction></app-introduction>
+
+<div>
+    <p *ngIf="randomCoffeeOfTheDay">Coffee Of The Day: {{ randomCoffeeOfTheDay.name }} </p>
+    <img *ngIf="randomCoffeeOfTheDay" [src]="randomCoffeeOfTheDay.image_url">
+</div>
