@@ -8,6 +8,7 @@ export interface Coffee {
     id: number;
     name: string;
     description: string;
+    flavor_profile: string;
     price: number;
     image_url: string;
 }
