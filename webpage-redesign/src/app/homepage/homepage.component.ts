@@ -22,6 +22,7 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   coffeeList: Coffee[] = [];
   randomCoffeeOfTheDay: Coffee | null = null;
 
+
   constructor(private coffeeService: CoffeeService) { }
 
   fetchCoffee() {
@@ -37,9 +38,23 @@ export class HomepageComponent implements OnInit, AfterViewInit {
       });
   }
 
+
   displayRandomCoffee() {
     this.randomCoffeeOfTheDay = this.coffeeService.getRandomCoffee(this.coffeeList);
+
+    if (this.randomCoffeeOfTheDay && this.randomCoffeeOfTheDay.image_url) { // checking if randomCoffeeOfTheDay and image_url have data or returns null
+      this.coffeeService.getImageSize(this.randomCoffeeOfTheDay.image_url)  //passing image_url to the getImageSize method from the Coffee service
+        .then(size => {                                                         //.then is used to handle results of a successful promise
+          if (size.width === 2000 && size.height === 1500) {
+            console.log(`Image size is correct:`, size);
+          } else {
+            this.displayRandomCoffee()
+          }
+        })
+        .catch(err => console.error('Error fetching image size:', err));
+    }
   }
+
 
   ngOnInit() {
     console.log('Initialized');
