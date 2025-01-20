@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomepageComponent implements OnInit, AfterViewInit {
 
+
   showElement1 = signal(true);
   showElement2 = signal(false);
   showElement3 = signal(false);
