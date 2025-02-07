@@ -1,9 +1,4 @@
 .coffeeOfTheDayContainer {
-    background: linear-gradient(to right,
-            var(--accent-color) 0%,
-            var(--accent-color)50%,
-            var(--primary-text) 50%,
-            var(--primary-text) 100%);
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
@@ -13,17 +8,26 @@
     min-height: 425px;
     margin-top: 30px;
     border-radius: 90px;
+
 }
 
-/* Coffee Image Styling */
+.gradientBackground {
+    width: 75%;
+    margin: 0 auto;
+    max-height: 420px;
+    margin-top: 0px;
+    border-radius: 90px;
+    z-index: -1;
+    position: absolute;
+}
+
 .coffeeOfTheDayImg {
     max-width: 100%;
-    /* Ensure the image scales properly */
     align-self: center;
-    /* Center image vertically */
     justify-self: center;
-    /* Center image horizontally */
     border: red;
+    z-index: 1;
+
 }
 
 .coffeeTextContainer {
@@ -34,6 +38,8 @@
     height: 100%;
     position: relative;
     box-sizing: border-box;
+    z-index: 1;
+
 
 }
 
@@ -53,8 +59,6 @@
 }
 
 
-
-/* Coffee of the Day Accent Text 1 */
 .coffeeOfTheDayAccent1 {
     margin: 0;
     font-family: "megunso";
@@ -63,28 +67,24 @@
     color: var(--accent-color);
 }
 
-/* Coffee of the Day Accent Text 2 */
 .coffeeOfTheDayAccent2 {
     margin: 0;
     font-family: "megunso";
     font-variant-ligatures: none;
     font-size: 3em;
-    color: var(--background-color);
+    color: var(--primary-color);
 }
 
-/* Button Container */
 .buttonContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Center buttons vertically */
     align-items: center;
-    /* Center buttons horizontally */
     gap: 1em;
-    /* Add spacing between buttons */
+    z-index: 1;
+
 }
 
-/* Button Styles */
 .button1,
 .button2,
 .button3 {
@@ -96,28 +96,105 @@
     cursor: pointer;
     padding: 20px;
     width: 50px;
-    /* Ensure consistent button size */
     height: 50px;
-    /* Ensure consistent button size */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Shop Now Button */
-.shopNowButton {
-    text-decoration: none;
-    background-color: transparent;
-    color: var(--primary-color);
-    font-size: 5em;
-    border: 2px solid var(--primary-color);
-    border-radius: 9999px;
-    cursor: pointer;
-    margin-top: 0.25em;
-    font-family: "Blanks";
-    padding: 30px;
+.scrollingEffect {
+    margin-top: 75px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-button:hover {
-    background-color: var(--background-color);
+.scroll-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    min-width: 200%;
+    animation: scrollingText var(--speed) linear infinite;
+    color: var(--primary-text);
+}
+
+.scroll-content p {
+    margin: 0;
+    padding: 0 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    font-family: "megunso";
+    font-variant-ligatures: none;
+    color: var(--primary-text);
+    margin-top: 10px;
+}
+
+.scroll-container:nth-child(even) .scroll-content {
+    animation-direction: reverse;
+}
+
+@keyframes scrollingText {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.recipeRedirect {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    /* Centers items vertically */
+    justify-items: center;
+    /* Centers items horizontally */
+    /* Ensures full viewport height if needed */
+    text-align: center;
+    /* Centers text inside elements */
+    margin-top: 40px;
+}
+
+.spillTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "megunso";
+    font-variant-ligatures: none;
+    font-size: 60px;
+    color: var(--primary-text);
+}
+
+.spillImage,
+.spillImage2 {
+    width: 70%;
+    border-radius: 59px;
+}
+
+.recipeButton {
+    background: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50px;
+    border-color: var(--secondary-color);
+    border-style: solid;
+    font-family: "Blanks";
+    font-size: 60px;
+    color: var(--primary-text);
+}
+
+.recipeButton:hover {
+    background-color: var(--secondary-color);
 }

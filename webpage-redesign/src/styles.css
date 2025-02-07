@@ -22,13 +22,16 @@
 }
 
 :root {
-    --primary-text: #133020;
-    --background-color: #F8EDD9;
-    --primary-color: #327029;
-    --secondary-color: #F0BE49;
-    --accent-color: #DD5C36;
+    --primary-text: #250d10;
+    --background-color: #d0a583;
+    --primary-color: #5f4e34;
+    --secondary-color: #ad9f22;
+    --accent-color: #ba4353;
 }
 
 body {
     background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+
 }

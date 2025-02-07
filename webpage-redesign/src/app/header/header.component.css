@@ -16,12 +16,14 @@
     border-bottom: 1px solid var(--primary-text);
     position: sticky;
     z-index: 1000;
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    backdrop-filter: blur(6px);
+    height: 50px;
 }
 
 
 h1 {
-    font-family: 'Moonkids';
+    font-family: 'Megunso';
     font-weight: 100;
     overflow: hidden;
     margin-right: 2em;
@@ -54,12 +56,13 @@ ul {
 
 .navbar ul li a {
     font-family: 'Megunso';
-
+    font-weight: bold;
     text-decoration: none;
     color: var(--primary-text)
 }
 
 li {
+    margin-top: 5px;
     padding: 5px;
     font-size: 20px;
 

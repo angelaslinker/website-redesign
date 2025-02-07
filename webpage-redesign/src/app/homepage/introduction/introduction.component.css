@@ -1,56 +1,57 @@
-.imageContainer {
+body {
+    margin: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    /* Center horizontally */
     align-items: center;
-    margin-top: 20px;
+    /* Center vertically */
+    background-color: var(--background-color);
+    /* Optional: for testing visibility */
 }
-
-.introImage {
-    max-width: 90%;
-    height: auto;
-    z-index: 1;
-    position: relative;
-    align-items: center;
-    border-radius: 20px;
-}
-
-
 
 .introduction {
+    text-align: center;
     font-size: 40px;
     color: var(--background-color);
-    position: absolute;
-    z-index: 2;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    text-shadow: 2px 2px var(--primary-text);
+    margin: 100px;
+    z-index: 1;
+
 }
 
-.phrase,
-.button {
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -50px;
+
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* height: 2%; */
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    /* Ensures the video covers the entire area */
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+
+.introPhrase {
+    text-shadow: 2px 2px 2px var(--accent-color);
+}
+
+.phrase {
     font-family: 'megunso';
     font-variant-ligatures: none;
 
-}
-
-.button {
-    text-decoration: none;
-    margin-top: .7em;
-    background-color: transparent;
-    color: var(--background-color);
-    text-shadow: 1px 1px var(--primary-text);
-    font-size: 1em;
-    border: 2px solid var(--background-color);
-    border-radius: 9999px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-
-.button:hover {
-    background-color: var(--background-color);
-    color: var(--primary-text);
 }
 
 .accent {
